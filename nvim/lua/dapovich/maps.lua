@@ -31,3 +31,8 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
+
+-- Buffer movement
+keymap.set('n', 'bn', ':bn<CR>') -- Move to the next buffer
+keymap.set('n', 'bp', ':bp<CR>') -- Move to the previous buffer
+keymap.set('n', 'bd', ':bd<CR>') -- Delete the buffer

@@ -16,3 +16,10 @@ Group.new("StatuslineError2", colors.red:light(), groups.Statusline)
 Group.new("StatuslineError3", colors.red, groups.Statusline)
 
 Group.new("WinSeparator", nil, nil)
+
+Group.new("Type", colors.violet, groups.Type, styles.bold)
+Group.new("Keyword", colors.violet, groups.Keyword, styles.bold)
+Group.new("Structure", colors.violet, groups.Structure, styles.bold)
+
+-- Transparent background
+vim.cmd('highlight Normal ctermbg=NONE guibg=NONE')

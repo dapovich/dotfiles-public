@@ -10,9 +10,8 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Colorschemes and colorbuddy plugin
+  -- Colorscheme and colorbuddy plugin
   use 'tjdevries/gruvbuddy.nvim'
-  use 'svrana/neosolarized.nvim'
   use 'tjdevries/colorbuddy.nvim'
 
   use 'hoob3rt/lualine.nvim' -- Statusline
@@ -57,5 +56,8 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim' -- Super fast git decorations implemented purely in lua
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+  -- Running tests with py.test
+  use 'alfredodeza/pytest.vim'
 
 end)

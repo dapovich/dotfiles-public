@@ -10,6 +10,16 @@ custom_auto.replace.c.fg = '#282828'
 custom_auto.command.c.fg = '#282828'
 custom_auto.inactive.c.fg = '#282828'
 
+custom_auto.normal.c.bg = '#93a1a1'
+custom_auto.insert.c.bg = '#93a1a1'
+custom_auto.visual.c.bg = '#93a1a1'
+custom_auto.replace.c.bg = '#93a1a1'
+custom_auto.command.c.bg = '#93a1a1'
+custom_auto.inactive.c.bg = '#93a1a1'
+
+-- Customize normal colors
+custom_auto.normal.a.bg = '#f8fe7a'
+
 lualine.setup {
   options = {
     icons_enabled = true,
@@ -20,10 +30,10 @@ lualine.setup {
   },
   sections = {
     lualine_a = {
-      { 'mode', separator = { right = ''} },
+      { 'mode', separator = { right = '▓▒░'} },
     },
     lualine_b = {
-      { 'branch', separator = { right = '▓▒░'} },
+      { 'branch'},
     },
     lualine_c = {{
       'filename',

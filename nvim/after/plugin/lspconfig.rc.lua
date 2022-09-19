@@ -101,6 +101,13 @@ nvim_lsp.clangd.setup {
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }
 }
 
+-- LSP cmake server
+nvim_lsp.cmake.setup {
+  on_attach = on_attach,
+  lsp_flags = lsp_flags,
+  capabilities = capabilities,
+}
+
 -- Use builtin LSP to customize diagnostics icons and style
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
