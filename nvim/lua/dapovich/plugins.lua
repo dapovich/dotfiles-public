@@ -11,10 +11,7 @@ packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Colorscheme and colorbuddy plugin
-  use 'tjdevries/gruvbuddy.nvim'
-  use 'tjdevries/colorbuddy.nvim'
-
-  use 'hoob3rt/lualine.nvim' -- Statusline
+  use 'tek256/simple-dark'
 
   use 'neovim/nvim-lspconfig' -- LSP
   use 'onsails/lspkind-nvim' -- VSCode-like pictograms

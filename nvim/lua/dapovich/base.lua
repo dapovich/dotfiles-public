@@ -1,5 +1,8 @@
 vim.cmd("autocmd!")
 vim.cmd("set guicursor=") -- Turn off changing shape of cursor in different modes
+vim.cmd("set noundofile")
+vim.cmd("set noswapfile")
+vim.cmd("set nobackup")
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
