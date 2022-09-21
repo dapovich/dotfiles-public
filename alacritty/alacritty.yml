@@ -34,8 +34,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 5
-    y: 5
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
@@ -44,8 +44,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.6
-  # opacity: 0.80
+  opacity: 0.8 
 
   # Window decorations
   #
@@ -568,6 +567,31 @@ schemes:
       cyan:    '#54ced6'
       white:   '#282a2e'
 
+  #### Simple Dark ####
+  SimpleDark: &SimpleDark
+    primary:
+     background: '#0a0a0a'
+     foreground: '#B8B9B4'
+
+    normal:
+     black: '#0A0A0A'
+     red: '#939490'
+     green: '#5E6E5C'
+     yellow: '#B6B8B3'
+     blue: '#727370'
+     magenta: '#D1D1CB'
+     cyan: '#636361'
+     white: '#AAABA6'
+
+    bright:
+     black: '#2E2E2C'
+     red: '#989995'
+     green: '#636361'
+     yellow: '#BBBDB8'
+     blue: '#777875'
+     magenta: '#D6D6D0'
+     cyan: '#696966'
+     white: '#AFB0AB'
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
@@ -582,8 +606,9 @@ schemes:
 # *SolarizedLight
 # *SolarizedDark
 # *TomorrowNight
+# *SimpleDark
 
-colors: *SolarizedDark
+colors: *SimpleDark
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
