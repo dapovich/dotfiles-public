@@ -44,7 +44,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.8 
+  opacity: 1.0
 
   # Window decorations
   #
@@ -115,7 +115,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Hack NF
+    family: JetBrainsMonoNL Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -134,7 +134,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack NF
+    family: JetBrainsMonoNL Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -153,7 +153,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack NF
+    family: JetBrainsMonoNL Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -172,7 +172,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack NF
+    family: JetBrainsMonoNL Nerd Font
     # family: CodeNewRoman Nerd Font
     # family: RobotoMono Nerd Font
     # family: Hack
@@ -186,7 +186,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12
+  size: 14
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -592,6 +592,40 @@ schemes:
      magenta: '#D6D6D0'
      cyan: '#696966'
      white: '#AFB0AB'
+
+
+  #### github Alacritty Colors ####
+  GithubTheme: &GithubTheme
+    # Default colors
+    primary:
+      background: '0x24292e'
+      foreground: '0xd1d5da'
+
+    # Normal colors
+    normal:
+      black:   '0x586069'
+      red:     '0xea4a5a'
+      green:   '0x34d058'
+      yellow:  '0xffea7f'
+      blue:    '0x2188ff'
+      magenta: '0xb392f0'
+      cyan:    '0x39c5cf'
+      white:   '0xd1d5da'
+
+    # Bright colors
+    bright:
+      black:   '0x959da5'
+      red:     '0xf97583'
+      green:   '0x85e89d'
+      yellow:  '0xffea7f'
+      blue:    '0x79b8ff'
+      magenta: '0xb392f0'
+      cyan:    '0x56d4dd'
+      white:   '0xfafbfc'
+
+    indexed_colors:
+      - { index: 16, color: '0xd18616' }
+      - { index: 17, color: '0xf97583' }
 ######################################################################
 ## SET THEME: Choose ONE color scheme from those in the above list. ##
 ## ###################################################################
@@ -607,8 +641,9 @@ schemes:
 # *SolarizedDark
 # *TomorrowNight
 # *SimpleDark
+# *GithubTheme
 
-colors: *SimpleDark
+colors: *DoomOne
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
