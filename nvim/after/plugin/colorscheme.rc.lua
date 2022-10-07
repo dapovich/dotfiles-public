@@ -1,9 +1,24 @@
-vim.cmd [[
-  set shortmess+=I
-  set laststatus=0
-  set background=dark
-  colorscheme simple-dark-transparent
-  hi TabLineFill cterm=none gui=none guifg=#0a0a0a guibg=#0a0a0a
-  hi TabLineSel guibg=#0a0a0a
-  hi TabLine cterm=none gui=none guibg=#0a0a0a guifg=#636361
-]]
+local status, one_monokai = pcall(require, "one_monokai")
+if (not status) then return end
+
+-- Additional settings
+vim.opt.laststatus = 0
+
+one_monokai.setup({
+  colors = {
+    normal = "#abb2bf",
+    number = "#ce95b8",
+    keyword = "#98c379",
+    special = "#379aef",
+    comment = "#676e7b",
+  },
+  themes = function(colors)
+    return {
+      Operator = { fg = colors.normal },
+      Delimiter = { fg = colors.normal },
+      Number = { fg = colors.number },
+      Special = { fg = colors.special },
+      Comment = { fg = colors.comment, italic = false },
+    }
+  end,
+})

@@ -10,8 +10,8 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Colorscheme and colorbuddy plugin
-  use 'tek256/simple-dark'
+  -- Use one-monokai colorscheme
+  use 'cpea2506/one_monokai.nvim'
 
   use 'neovim/nvim-lspconfig' -- LSP
   use 'onsails/lspkind-nvim' -- VSCode-like pictograms
@@ -23,6 +23,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  use 'nvim-treesitter/playground'
 
   use 'nvim-lua/plenary.nvim' -- Required dependencies
   use 'nvim-telescope/telescope.nvim' -- A highly extendable fuzzy finder over lists
