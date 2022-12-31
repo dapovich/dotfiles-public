@@ -49,30 +49,23 @@ telescope.setup {
 telescope.load_extension("file_browser")
 
 -- Key mappings
-vim.keymap.set('n', ';f', function()
-  builtin.find_files({
-    no_ignore = false,
-    hidden = true
-  })
-end)
-vim.keymap.set('n', ';r', function()
-  builtin.live_grep()
-end)
-vim.keymap.set('n', '\\', function()
-  builtin.buffers()
-end)
+vim.keymap.set('n', ';?', builtin.oldfiles, { desc = '[?] Find recently opened files'})
+vim.keymap.set('n', ';b', builtin.buffers, { desc = '[] Find existing buffers'})
 vim.keymap.set('n', ';cb', function()
-  builtin.current_buffer_fuzzy_find()
-end)
-vim.keymap.set('n', ';t', function()
-  builtin.help_tags()
-end)
-vim.keymap.set('n', ';;', function()
-  builtin.resume()
-end)
-vim.keymap.set('n', ';e', function()
-  builtin.diagnostics()
-end)
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    windblend = 10,
+    previewer = false
+  })
+end, { desc = '[cb] Fuzzily search in current buffer'})
+
+
+vim.keymap.set('n', ';f', builtin.find_files, { desc = '[S]earch [F]iles'})
+vim.keymap.set('n', ';h', builtin.help_tags, { desc = '[S]earch [H]elp'})
+vim.keymap.set('n', ';w', builtin.grep_string, { desc = '[S]earch current [W]ord'})
+vim.keymap.set('n', ';g', builtin.live_grep, { desc = '[S]earch by [G]rep'})
+vim.keymap.set('n', ';d', builtin.diagnostics, { desc = '[S]earch [D]iagnostics'})
+
 vim.keymap.set('n', 'sf', function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
@@ -85,7 +78,3 @@ vim.keymap.set('n', 'sf', function()
     layout_config = { height = 40 }
   })
 end)
-
-
-
-

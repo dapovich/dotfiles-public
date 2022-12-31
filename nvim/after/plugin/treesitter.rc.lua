@@ -4,10 +4,7 @@ if (not status) then return end
 ts.setup {
   highlight = {
     enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = true,
+    additional_vim_regex_highlighting = {'org'},
     disable = {},
   },
   ensure_installed = {
@@ -25,3 +22,4 @@ ts.setup {
     enable = true,
   },
 }
+

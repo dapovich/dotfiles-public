@@ -1,5 +1,8 @@
-setlocal shiftwidth=4
 setlocal tabstop=4
+setlocal autoindent
+"setlocal expandtab
+setlocal backspace=indent,eol,start
+"setlocal smarttab
 
 " {{{ Mappings
 nnoremap <buffer><silent> <space>pf <cmd>Pytest file<CR>

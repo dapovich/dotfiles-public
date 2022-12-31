@@ -27,20 +27,26 @@ cmp.setup({
     { name = 'buffer', keyword_length = 5 },
     { name = 'nvim_lua'},
     { name = 'path'},
-    { name = 'luasnip'}
+    { name = 'luasnip'},
+    { name = 'orgmode'}
   }),
 
+  view = {
+    entries = { name = 'custom', selection_order = 'near_cursor' }
+  },
+
   formatting = {
-    format = lspkind.cmp_format {
+    format = lspkind.cmp_format({
       with_text = true,
-      menu = {
+      menu = ({
         buffer = "[buf]",
         nvim_lsp = "[LSP]",
         nvim_lua = "[api]",
         path = "[path]",
-        luasnip = "[snip]"
-      },
-    },
+        luasnip = "[snip]",
+        latex_symbols = "[Latex]"
+      }),
+    }),
   },
 })
 

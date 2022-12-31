@@ -36,3 +36,8 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', 'bn', ':bn<CR>') -- Move to the next buffer
 keymap.set('n', 'bp', ':bp<CR>') -- Move to the previous buffer
 keymap.set('n', 'bd', ':bd<CR>') -- Delete the buffer
+
+-- Terminal exit with ESC
+vim.cmd[[
+  tnoremap <Esc> <C-\><C-n>
+]]

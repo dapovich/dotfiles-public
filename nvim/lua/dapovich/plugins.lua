@@ -24,6 +24,7 @@ packer.startup(function(use)
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
   use 'nvim-treesitter/playground'
+  use {'nvim-orgmode/orgmode'}
 
   use 'nvim-lua/plenary.nvim' -- Required dependencies
   use 'nvim-telescope/telescope.nvim' -- A highly extendable fuzzy finder over lists
@@ -55,7 +56,16 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim' -- Super fast git decorations implemented purely in lua
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
+  use 'numToStr/Comment.nvim' -- Plugin for comment your code
+
   -- Running tests with py.test
   use 'alfredodeza/pytest.vim'
+
+  use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+
+  use 'nvim-lualine/lualine.nvim' -- Statusline
 
 end)

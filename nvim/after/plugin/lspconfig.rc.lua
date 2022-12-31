@@ -26,8 +26,7 @@ end
 
 -- Item icons
 protocol.CompletionItemKind = {
-  '', -- Text
-  '', -- Method
+  '', -- Text '', -- Method
   '', -- Function
   '', -- Constructor
   '', -- Field
@@ -54,7 +53,7 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
@@ -93,13 +92,20 @@ nvim_lsp.sumneko_lua.setup {
   },
 }
 
--- LSP C/C++ server
+--LSP C/C++ server
 nvim_lsp.clangd.setup {
   on_attach = on_attach,
   lsp_flags = lsp_flags,
   capabilites = capabilities,
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }
 }
+
+-- Use ccls language server because there is a problem with clang to find c++ headers
+-- nvim_lsp.ccls.setup {
+--   on_attach = on_attach,
+--   lsp_flags = lsp_flags,
+--   capabilities = capabilities,
+-- }
 
 -- LSP cmake server
 nvim_lsp.cmake.setup {
