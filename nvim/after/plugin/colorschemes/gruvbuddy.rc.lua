@@ -1,0 +1,27 @@
+-- local status, colorbuddy = pcall(require, "colorbuddy")
+-- if (not status) then return end
+--
+-- colorbuddy.colorscheme("gruvbuddy")
+--
+-- vim.opt.laststatus = 0
+--
+-- -- Setup colorbuddy configuration groups
+-- local c = require("colorbuddy.color").colors
+-- local Group = require("colorbuddy.group").Group
+-- local g = require("colorbuddy.group").groups
+-- local s = require("colorbuddy.style").styles
+--
+-- -- Configure style-groups
+-- Group.new("@variable", c.superwhite, nil)
+--
+-- Group.new("GoTestSuccess", c.green, nil, s.bold)
+-- Group.new("GoTestFail", c.red, nil, s.bold)
+--
+-- Group.new("WinSeparator", nil, nil)
+--
+-- Group.new("LspParameter", nil, nil, s.italic)
+-- Group.new("LspDeprecated", nil, nil, s.strikethrough)
+--
+-- Group.new("@function.bracket", g.Normal, g.Normal)
+-- Group.new("Type", c.purple:light(), nil, nil)
+-- Group.new("Keyword", c.purple, g.Normal, s.bold)

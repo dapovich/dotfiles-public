@@ -10,9 +10,6 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  -- Use one-monokai colorscheme
-  use 'cpea2506/one_monokai.nvim'
-
   use 'neovim/nvim-lspconfig' -- LSP
   use 'onsails/lspkind-nvim' -- VSCode-like pictograms
   use 'glepnir/lspsaga.nvim' -- LSP UI's
@@ -61,8 +58,18 @@ packer.startup(function(use)
   -- Running tests with py.test
   use 'alfredodeza/pytest.vim'
 
+  -- Neosolarized colorscheme
   use {
     'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
+
+  -- Use one-monokai colorscheme
+  use 'cpea2506/one_monokai.nvim'
+
+  -- Gruvbuddy colorscheme
+  use {
+    'tjdevries/gruvbuddy.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
 
