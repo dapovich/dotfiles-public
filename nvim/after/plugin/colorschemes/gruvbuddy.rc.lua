@@ -11,6 +11,10 @@
 -- local g = require("colorbuddy.group").groups
 -- local s = require("colorbuddy.style").styles
 --
+-- local cb = require('colorbuddy.init')
+-- local Color = cb.Color
+-- Color.new('lightblack', '#22222e')
+--
 -- -- Configure style-groups
 -- Group.new("@variable", c.superwhite, nil)
 --
@@ -25,3 +29,4 @@
 -- Group.new("@function.bracket", g.Normal, g.Normal)
 -- Group.new("Type", c.purple:light(), nil, nil)
 -- Group.new("Keyword", c.purple, g.Normal, s.bold)
+-- Group.new("Normal", c.white, c.lightblack, nil)

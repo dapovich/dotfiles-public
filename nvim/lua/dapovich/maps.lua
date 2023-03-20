@@ -41,3 +41,6 @@ keymap.set('n', 'bd', ':bd<CR>') -- Delete the buffer
 vim.cmd[[
   tnoremap <Esc> <C-\><C-n>
 ]]
+
+-- Formatting current buffer with formatting tools provided by null-ls
+keymap.set('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>')

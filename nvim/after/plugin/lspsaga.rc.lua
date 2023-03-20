@@ -8,7 +8,14 @@ lspsaga.setup({
     cache_code_action = false,
     sign = false,
     virtual_text = false
-  }
+  },
+  lightbulb = {
+    enable = false,
+    enable_in_insert = false,
+    sign = false,
+    sign_priority = 40,
+    virtual_text = false,
+  },
 })
 
 local opts = { noremap = true, silent = true }

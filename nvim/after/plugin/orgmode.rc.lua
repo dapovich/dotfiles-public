@@ -4,7 +4,6 @@ if (not status) then return end
 orgmode.setup_ts_grammar()
 
 orgmode.setup({
-  org_todo_keywords = {'TODO', 'WAITING', '|', 'DONE', 'DELEGATED', 'ALMOSTDONE'},
   org_todo_keyword_faces = {
     WAITING = ':foreground #ce95b8 :weight bold',
     DELEGATED = ':foreground #98c379 :weight bold',

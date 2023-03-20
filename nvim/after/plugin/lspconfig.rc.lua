@@ -73,7 +73,7 @@ nvim_lsp.pyright.setup {
 }
 
 -- Lua LSP
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
   capabilities = capabilities,
@@ -100,12 +100,18 @@ nvim_lsp.clangd.setup {
   filetypes = { "c", "cpp", "objc", "objcpp", "cuda" }
 }
 
--- Use ccls language server because there is a problem with clang to find c++ headers
--- nvim_lsp.ccls.setup {
---   on_attach = on_attach,
---   lsp_flags = lsp_flags,
---   capabilities = capabilities,
--- }
+-- LSP C#
+nvim_lsp.omnisharp.setup {
+  on_attach = on_attach,
+  lsp_flags = lsp_flags,
+  capabilities = capabilities,
+  cmd = { "dotnet", "~/tools/omnisharp-linux-x64-net6.0/OmniSharp.dll" },
+  enable_editorconfig_support = true,
+  enable_roslyn_analyzers = false,
+  organize_imports_on_format = false,
+  enable_import_completion = false,
+  sdk_include_prereleases = true,
+}
 
 -- LSP cmake server
 nvim_lsp.cmake.setup {
