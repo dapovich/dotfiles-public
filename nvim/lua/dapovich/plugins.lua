@@ -34,7 +34,7 @@ packer.startup(function(use)
   use 'hrsh7th/cmp-nvim-lua' -- nvim-cmp source for neovim Lua API
   use 'saadparwaiz1/cmp_luasnip' -- nvim-cmp requires snippet engine
 
-  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'nvim-tree/nvim-web-devicons' -- File icons
 
   -- Additional stuff
   use 'windwp/nvim-autopairs' -- A super powerful autopair plugin
@@ -75,4 +75,5 @@ packer.startup(function(use)
 
   use 'nvim-lualine/lualine.nvim' -- Statusline
 
+  use 'tjdevries/cyclist.vim' -- Cycle + listchars
 end)

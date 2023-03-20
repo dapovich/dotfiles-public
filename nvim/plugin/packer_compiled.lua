@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
     url = "https://github.com/tjdevries/colorbuddy.nvim"
   },
+  ["cyclist.vim"] = {
+    loaded = true,
+    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/cyclist.vim",
+    url = "https://github.com/tjdevries/cyclist.vim"
+  },
   ["git.nvim"] = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/git.nvim",
@@ -118,6 +123,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["gruvbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim",
+    url = "https://github.com/tjdevries/gruvbuddy.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -187,7 +197,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["one_monokai.nvim"] = {
     loaded = true,

@@ -9,7 +9,12 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
+vim.cmd("set relativenumber")
+-- vim.cmd("set cursorlineopt=number") -- Highlight only line number
+vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o") -- Prevent continuation of comments to the next line
+vim.cmd("set noshowmode") -- Disable showing status at the bottom bar
 
+vim.opt.cursorline = true
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
