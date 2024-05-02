@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["Comment.nvim"] = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/Comment.nvim",
-    url = "https://github.com/numToStr/Comment.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,15 +99,15 @@ _G.packer_plugins = {
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["colorbuddy.nvim"] = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
-    url = "https://github.com/tjdevries/colorbuddy.nvim"
-  },
   ["cyclist.vim"] = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/cyclist.vim",
     url = "https://github.com/tjdevries/cyclist.vim"
+  },
+  ["express_line.nvim"] = {
+    loaded = true,
+    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/express_line.nvim",
+    url = "https://github.com/tjdevries/express_line.nvim"
   },
   ["git.nvim"] = {
     loaded = true,
@@ -124,10 +119,10 @@ _G.packer_plugins = {
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["gruvbuddy.nvim"] = {
+  ["greenlight.nvim"] = {
     loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim",
-    url = "https://github.com/tjdevries/gruvbuddy.nvim"
+    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/greenlight.nvim",
+    url = "https://github.com/dapovich/greenlight.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
@@ -137,22 +132,12 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
-  ["lualine.nvim"] = {
+  ["mini.nvim"] = {
     loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["markdown-preview.nvim"] = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
-    url = "https://github.com/iamcco/markdown-preview.nvim"
-  },
-  ["neosolarized.nvim"] = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/neosolarized.nvim",
-    url = "https://github.com/svrana/neosolarized.nvim"
+    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/mini.nvim",
+    url = "https://github.com/echasnovski/mini.nvim"
   },
   ["null-ls.nvim"] = {
     loaded = true,
@@ -199,16 +184,6 @@ _G.packer_plugins = {
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
-  ["one_monokai.nvim"] = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/one_monokai.nvim",
-    url = "https://github.com/cpea2506/one_monokai.nvim"
-  },
-  orgmode = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/orgmode",
-    url = "https://github.com/nvim-orgmode/orgmode"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -223,11 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["pytest.vim"] = {
-    loaded = true,
-    path = "/home/dapovich/.local/share/nvim/site/pack/packer/start/pytest.vim",
-    url = "https://github.com/alfredodeza/pytest.vim"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,

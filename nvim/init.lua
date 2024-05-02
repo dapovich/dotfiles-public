@@ -18,5 +18,5 @@ if is_win then
   require('dapovich.windows')
 end
 if is_unix then
-  require('dapovich.unix')
+  --require('dapovich.unix')
 end

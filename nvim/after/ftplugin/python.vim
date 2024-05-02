@@ -1,6 +1,7 @@
 setlocal tabstop=4
+setlocal shiftwidth=4
 setlocal autoindent
-"setlocal expandtab
+setlocal expandtab
 setlocal backspace=indent,eol,start
 "setlocal smarttab
 
