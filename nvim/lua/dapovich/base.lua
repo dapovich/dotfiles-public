@@ -9,8 +9,9 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 vim.opt.clipboard = "unnamedplus" -- Available to use system clipboard
 
-vim.wo.number = true
-vim.o.relativenumber = true
+-- Show line numbers (default: false)
+vim.wo.number = false
+vim.o.relativenumber = false
 
 vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o") -- Prevent continuation of comments to the next line
 vim.cmd("set showmode") -- Showing -- INSERT --, -- VISUAL LINE -- message below statusline

@@ -22,7 +22,34 @@ if (not status_mini_hipatterns) then
   return
 end
 
+local status_mini_ai, mini_ai = pcall(require, "mini.ai")
+if (not status_mini_ai) then
+  print("Error: mini.ai cannot be loaded.")
+  return
+end
+
+-- Use default config.
+mini_ai.setup()
+
+-- Use default config.
 mini_align.setup()
+
+-- Use default config.
 mini_comment.setup()
+
+-- Use default config.
 mini_starter.setup()
-mini_hipatterns.setup()
+
+-- Use default config.
+mini_hipatterns.setup({
+  highlighters = {
+    -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+    fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme'},
+    hack  = { pattern = '%f[%w]()HACK()%f[%W]',  group = 'MiniHipatternsHack' },
+    todo  = { pattern = '%f[%w]()TODO()%f[%W]',  group = 'MiniHipatternsTodo' },
+    note  = { pattern = '%f[%w]()NOTE()%f[%W]',  group = 'MiniHipatternsNote' },
+
+    -- Highlight hex color strings ('#rrggbb') using that color
+    hex_color = mini_hipatterns.gen_highlighter.hex_color(),
+  },
+})

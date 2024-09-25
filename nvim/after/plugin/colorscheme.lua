@@ -13,11 +13,6 @@ greenlight.setup({
   themes = function(colors)
     -- Change highlight of correspond groups
     -- @Note: the key and value will be passed respectively to "nvim_set_hl"
-    return {
-      CurSearch = { bg = colors.palevioletred2, fg = colors.brown4 },
-      Search = { link = CurSearch },
-      DiagnosticError = { fg = colors.pink },
-      ErrorMsg = { link = DiagnosticError },
-    }
+    return {}
   end,
 })
