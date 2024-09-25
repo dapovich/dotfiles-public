@@ -3,12 +3,20 @@ if (not status) then return end
 local lspkind = require 'lspkind'
 
 cmp.setup({
+  -- Configure snippet engine.
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end,
   },
 
+  -- Turn off by default autocompletion pop up.
+  -- Use autocomplete feature only with <C-Space>.
+  completion = {
+    autocomplete = false,
+  },
+
+  -- Set up default mappings.
   mapping = cmp.mapping.preset.insert({
     ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<C-j>'] = cmp.mapping.select_next_item(),
@@ -22,6 +30,7 @@ cmp.setup({
     }),
   }),
 
+  -- Configire sources.
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'buffer', keyword_length = 5 },
@@ -37,13 +46,14 @@ cmp.setup({
 
   formatting = {
     format = lspkind.cmp_format({
-      with_text = true,
+      -- with_text = true,
+      mode = "symbol_text",
       menu = ({
-        buffer = "[buf]",
+        buffer = "[Buffer]",
         nvim_lsp = "[LSP]",
-        nvim_lua = "[api]",
-        path = "[path]",
-        luasnip = "[snip]",
+        nvim_lua = "[LuaApi]",
+        path = "[Path]",
+        luasnip = "[LuaSnip]",
         latex_symbols = "[Latex]"
       }),
     }),

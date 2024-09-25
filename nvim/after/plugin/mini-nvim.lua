@@ -5,17 +5,8 @@ if (not status_mini_align) then
 end
 
 local status_mini_comment, mini_comment = pcall(require, "mini.comment")
-if (not status_mini_comment) then return end
-
-local status_mini_cursorword, mini_cursorword = pcall(require, "mini.cursorword")
-if (not status_mini_cursorword) then
-  print("Error: mini.cursorword cannot be loaded.")
-  return
-end
-
-local status_mini_notify, mini_notify = pcall(require, "mini.notify")
-if (not status_mini_notify) then
-  print("Error: mini.notify cannot be loaded.")
+if (not status_mini_comment) then
+  print("Error: mini.comment cannot be loaded.")
   return
 end
 
@@ -25,10 +16,13 @@ if (not status_mini_starter) then
   return
 end
 
+local status_mini_hipatterns, mini_hipatterns = pcall(require, "mini.hipatterns")
+if (not status_mini_hipatterns) then
+  print("Error: mini.hipatterns cannot be loaded.")
+  return
+end
+
 mini_align.setup()
-
 mini_comment.setup()
-
-mini_notify.setup()
-
 mini_starter.setup()
+mini_hipatterns.setup()

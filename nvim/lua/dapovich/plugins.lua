@@ -8,14 +8,18 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  -- Use Packer.nvim as the plugin manager
   use 'wbthomason/packer.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+
   -- VSCode-like pictograms
   use 'onsails/lspkind-nvim'
+
   -- LSP UI's
   use 'nvimdev/lspsaga.nvim'
+
   -- Inject LSP diagnostics actions, and more via Lua
   use 'jose-elias-alvarez/null-ls.nvim'
 
@@ -24,7 +28,6 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-  use 'nvim-treesitter/playground'
 
   -- Required dependencies for some plugins
   use 'nvim-lua/plenary.nvim'
@@ -32,6 +35,14 @@ packer.startup(function(use)
   -- A highly extendable fuzzy finder over lists
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim' -- File browser based on `telescope.nvim`
+
+  -- LuaSnip
+  use({
+    "L3MON4D3/LuaSnip",
+    -- Follow latest release.
+    tag = "v2.*",
+    run = "make install_jsregexp",
+  })
 
   -- Completion
   use 'hrsh7th/nvim-cmp'
@@ -44,10 +55,6 @@ packer.startup(function(use)
   -- File icons
   use 'nvim-tree/nvim-web-devicons'
 
-  -- Additional stuff
-  use 'windwp/nvim-autopairs'  -- A super powerful autopair plugin
-  use 'windwp/nvim-ts-autotag' -- Use treesitter to autoclose and autorename html tag
-
   -- Highlighting color codes
   use 'norcalli/nvim-colorizer.lua'
 
@@ -59,9 +66,6 @@ packer.startup(function(use)
 
   -- For git blame & browse
   use 'dinhhuy258/git.nvim'
-
-  -- Expressline
-  use {"tjdevries/express_line.nvim", dev = false }
 
   -- Cycle + listchars
   use 'tjdevries/cyclist.vim'

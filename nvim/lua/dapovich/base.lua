@@ -13,7 +13,7 @@ vim.wo.number = true
 vim.o.relativenumber = true
 
 vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o") -- Prevent continuation of comments to the next line
--- vim.cmd("set noshowmode") -- Disable showing status at the bottom bar
+vim.cmd("set showmode") -- Showing -- INSERT --, -- VISUAL LINE -- message below statusline
 
 vim.opt.cursorline = true
 vim.opt.title = true

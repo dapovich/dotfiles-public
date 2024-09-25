@@ -52,7 +52,7 @@ telescope.load_extension("file_browser")
 
 -- Key mappings
 vim.keymap.set("n", ";?", builtin.oldfiles, { desc = "[?] Find recently opened files" })
-vim.keymap.set("n", ";b", builtin.buffers, { desc = "[] Find existing buffers" })
+vim.keymap.set("n", "<C-x>b", builtin.buffers, { desc = "[] Find existing buffers" })
 vim.keymap.set("n", ";cb", function()
 	-- You can pass additional configuration to telescope to change theme, layout, etc.
 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
@@ -72,7 +72,7 @@ vim.keymap.set("n", ";d", function()
 	}))
 end, { desc = "[S]earch [D]iagnostics" })
 
-vim.keymap.set("n", "sf", function()
+vim.keymap.set("n", "<C-x><C-f>", function()
 	telescope.extensions.file_browser.file_browser({
 		path = "%:p:h",
 		cwd = telescope_buffer_dir(),

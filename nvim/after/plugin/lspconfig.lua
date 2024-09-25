@@ -12,7 +12,7 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
--- Setup language servers
+-- *** Setup language servers *** --
 
 -- Pyright LSP for Python
 nvim_lsp.pyright.setup({
@@ -59,13 +59,6 @@ nvim_lsp.clangd.setup({
 nvim_lsp.cmake.setup({
   lsp_flags = lsp_flags,
   capabilities = capabilities,
-})
-
--- LSP for json
-nvim_lsp.jsonls.setup({
-  capabilities = capabilities,
-  cmd = { "vscode-json-language-server", "--stdio" },
-  filetypes = { "json", "jsonc" },
 })
 
 -- SystemVerilog and Verilog linter and formatter

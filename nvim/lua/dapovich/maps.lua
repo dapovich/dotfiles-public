@@ -26,3 +26,6 @@ vim.cmd[[
 
 -- Formatting current buffer with formatting tools provided by null-ls
 keymap.set('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>')
+
+-- Search with <C-s> keymap.
+keymap.set('n', '<C-s>', '/')
