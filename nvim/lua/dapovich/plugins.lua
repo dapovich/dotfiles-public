@@ -73,7 +73,10 @@ packer.startup(function(use)
   -- Library of 35+ independent Lua modules improving overall Neovim experience with minimal effort
   use { 'echasnovski/mini.nvim' }
 
-  -- Greenlight colorscheme
-  use { 'dapovich/greenlight.nvim' }
+  -- Greenlight dapovich colorscheme
+  use { "dapovich/greenlight.nvim" }
+
+  -- Rosé Pine for Neovim
+  use { "rose-pine/neovim" }
 
 end)

@@ -21,7 +21,7 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Terminal exit with ESC
-vim.cmd[[
+vim.cmd [[
   tnoremap <Esc> <C-\><C-n>
 ]]
 
@@ -30,3 +30,12 @@ keymap.set('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>')
 
 -- Search with <C-s> keymap.
 keymap.set('n', '<C-s>', '/')
+
+-- Create a vertical splitted window
+keymap.set('n', '<C-x>3', ':vs<cr>')
+
+-- Close the current window
+keymap.set('n', '<C-x>q', ':wq<cr>')
+
+-- Move to the next available window
+keymap.set('n', '<C-x>o', '<C-w>w')

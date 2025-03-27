@@ -72,20 +72,6 @@ nvim_lsp.verible.setup({
   end,
 })
 
--- Veridian
-local util = require("lspconfig/util")
-local root_pattern = util.root_pattern("veridian.yml", ".git")
-
-nvim_lsp.veridian.setup({
-  capabilities = capabilities,
-  lsp_flags = lsp_flags,
-  --root_dir = function() return vim.loop.cwd() end
-  root_dir = function(fname)
-    local filename = util.path.is_absolute(fname) and fname or util.path.join(vim.loop.cwd(), fname)
-    return root_pattern(filename) or util.path.dirname(filename)
-  end,
-})
-
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

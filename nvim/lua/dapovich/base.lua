@@ -3,18 +3,18 @@ vim.cmd("set noundofile")
 vim.cmd("set noswapfile")
 vim.cmd("set nobackup")
 
-
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 vim.opt.clipboard = "unnamedplus" -- Available to use system clipboard
+-- vim.opt.guicursor = "" -- Turn off different shapes of cursors in different modes (according to legacy VIM behaviour).
 
 -- Show line numbers (default: false)
-vim.wo.number = false
+vim.wo.number = true
 vim.o.relativenumber = false
 
 vim.cmd("au BufEnter * set fo-=c fo-=r fo-=o") -- Prevent continuation of comments to the next line
-vim.cmd("set showmode") -- Showing -- INSERT --, -- VISUAL LINE -- message below statusline
+vim.cmd("set showmode") -- Showing '-- INSERT --', '-- VISUAL LINE --' message below statusline
 
 vim.opt.cursorline = true
 vim.opt.title = true
@@ -40,10 +40,6 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
-
--- Undercurl
--- vim.cmd([[let &t_Cs = "\e[4:3m"]])
--- vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
