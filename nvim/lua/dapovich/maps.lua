@@ -32,10 +32,16 @@ keymap.set('n', '<leader>f', ':lua vim.lsp.buf.format()<CR>')
 keymap.set('n', '<C-s>', '/')
 
 -- Create a vertical splitted window
-keymap.set('n', '<C-x>3', ':vs<cr>')
+keymap.set('n', '<C-x>3', ':vsplit<cr>')
+
+-- Create a horizontal splitted window
+keymap.set('n', '<C-x>2', ':split<cr>')
+
+-- Close all others windows except the current window
+keymap.set('n', '<C-x>1', ':only<cr>')
 
 -- Close the current window
-keymap.set('n', '<C-x>q', ':wq<cr>')
+keymap.set('n', '<C-x>q', ':q<cr>')
 
 -- Move to the next available window
 keymap.set('n', '<C-x>o', '<C-w>w')
